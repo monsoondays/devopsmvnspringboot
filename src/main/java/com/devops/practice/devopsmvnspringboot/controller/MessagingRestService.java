@@ -18,7 +18,7 @@ public Message getMessage(
         @RequestParam final String name) {
       
   final Message message = new Message();
-  message.setText("Hello " + name +", "+"How are you?");
+  message.setText("Hello " + name +", "+"How are you!");
   return message;
     
 }
