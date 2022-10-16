@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'maven-3.8.6' 
-	    docker 'docker'
+	docker 'docker'
     }
     environment {
         DATE = new Date().format('yy.M')
@@ -31,12 +31,6 @@ pipeline {
                 }
             }
         }
-        stage('Deploy'){
-            steps {
-                sh "docker stop devopsmvnspringboot | true"
-                sh "docker rm devopsmvnspringboot | true"
-                sh "docker run --name devopsmvnspringboot -d -p 9004:8080 monsoondays/devopsmvnspringboot:${TAG}"
-            }
-        }
+      
     }
 }
