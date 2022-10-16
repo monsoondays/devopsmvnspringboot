@@ -10,7 +10,7 @@ import com.devops.practice.devopsmvnspringboot.entity.Message;
 @RestController	
 @RequestMapping(path = "/messaging")
 public class MessagingRestService {
-//http://localhost:9001/messaging/message?name='Name'
+/////http://localhost:9001/messaging/message?name='Name'
 @GetMapping(
     path = "/message",
     params = {"name"})
