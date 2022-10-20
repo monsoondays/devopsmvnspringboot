@@ -1,8 +1,8 @@
 pipeline {
-    agent any
+   agent { docker { image 'maven-3.8.6' } }
     tools {
         maven 'maven-3.8.6' 
-	docker 'docker:latest'
+	
     }
     environment {
         DATE = new Date().format('yy.M')
