@@ -20,6 +20,6 @@ pipeline {
                     docker.build("monsoondays/devopsmvnspringboot:${TAG}")
                 }
             }
-        }
+	} }
 	    
 }
