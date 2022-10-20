@@ -14,12 +14,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Docker Build') {
-            steps {
-                script {
-                    docker.build("monsoondays/devopsmvnspringboot:${TAG}")
-                }
-            }
-	} }
+       }
 	    
 }
